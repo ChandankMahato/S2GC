@@ -1,0 +1,31 @@
+.bus-container {
+  height: 600px;
+  align-items: center;
+}
+
+
+
+.test {
+  height: 500px;
+  width: 2000px;
+}
+
+.bus-box {
+  overflow-y: auto;
+  border: 1px solid var(--dark);
+}
+
+@media only screen and (min-width: 768px) {
+  .bus-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bus-container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+  }
+}
