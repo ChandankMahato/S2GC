@@ -1,5 +1,26 @@
 var IDArray = [];
 
+function selectionColors(S0, S1, S2) {
+  S0 !== null ? activeSignalOn(`selection-${S0}`) : null;
+  S1 !== null ? activeSignalOn(`selection-${S1}`) : null;
+  S2 !== null ? activeSignalOn(`selection-${S2}`) : null;
+  S0 !== null ? activeSignalOn(`selection-text-${S0}`) : null;
+  S1 !== null ? activeSignalOn(`selection-text-${S1}`) : null;
+  S2 !== null ? activeSignalOn(`selection-text-${S2}`) : null;
+}
+
+function toggleFF(FF) {
+  let element = document.getElementById(`FF-${FF}-value`);
+  element.innerHTML == "0"
+    ? (element.innerHTML = "1")
+    : (element.innerHTML = "0");
+}
+
+function changeStateFF(FF, value) {
+  let element = document.getElementById(`FF-${FF}-value`);
+  element.innerHTML = value;
+}
+
 function activeSignalOn(signalID) {
   IDArray.push({ id: "signalID", value: signalID });
   let element = document.getElementById(signalID);
@@ -28,16 +49,13 @@ function activeBoxOn(boxID) {
   IDArray.push({ id: "boxID", value: boxID });
   let element = document.getElementById(boxID);
   element.style.setProperty("background-color", "var(--activeBoxOn)");
+  element.style.setProperty("color", "var(--activeBoxOnText)");
 }
 
 function borderOn(boxBorderID) {
+  IDArray.push({ id: "boxBorderID", value: boxBorderID });
   let element = document.getElementById(boxBorderID);
   element.style.setProperty("border", "var(--activeBorderOn)");
-}
-
-function borderOff(boxBorderID) {
-  let element = document.getElementById(boxBorderID);
-  element.style.setProperty("border", "var(--activeBorderOff)");
 }
 
 function signalOff() {
@@ -61,8 +79,9 @@ function signalOff() {
       }
       if (object.id === "boxID") {
         element.style.setProperty("background-color", "var(--activeBoxOff)");
+        element.style.setProperty("color", "var(--activeBoxOffText)");
       }
-      if (Object.id === "boxBorderId") {
+      if (object.id === "boxBorderID") {
         element.style.setProperty("border", "var(--activeBorderOff)");
       }
     });

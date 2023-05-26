@@ -1,0 +1,55 @@
+.pause-play-box {
+  display: flex;
+}
+.backward,
+.play,
+.forward,
+.pause,
+.reset {
+  position: relative;
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.backward {
+  background-color: var(--dark);
+}
+
+.backward:active {
+  background-color: var(--darker);
+}
+
+.play {
+  background-color: var(--green);
+}
+
+.play:active {
+  background-color: var(--darkGreen);
+}
+
+.forward {
+  background-color: var(--dark);
+}
+
+.forward:active {
+  background-color: var(--darker);
+}
+
+.pause {
+  background-color: var(--red);
+}
+
+.reset {
+  background-color: var(--red);
+}
+
+.pause:active,
+.reset:active {
+  background-color: var(--darkRed);
+}

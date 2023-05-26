@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
 
 :root {
-    --dark: #333333;
+    --darker: #000000;
+    --dark: #515151;
     --overlay: rgba(0, 0, 0, 0.4)
     --red: #d10808;
     --lightYellow: #c6fd58;
     --green: #699d00;
+    --darkGreen: #375201;
     --gray: #9d9d9d;
+    --lightGray: #d0cece;
     --white: #ffffff;
+    --red: #ff0000;
+    --darkRed: #920202;
     --poppins: "Poppins", sans-serif;
-
     --activeSignalOn: #ff0000;
     --activeSignalOff: #333333;
 
@@ -17,10 +21,17 @@
     --transferSignalOff: #333333;
 
     --activeBoxOn: #c6fd58;
+    --activeBoxOnText: #ff0000;
     --activeBoxOff: #ffffff;
+     --activeBoxOffText: #333333;
 
     --activeBorderOn: 2px solid #ff0000;
     --activeBorderOff: 2px solid #333333;
+
+    --success: #0abf30;
+    --error: #e24d4c;
+    --warning: #e9bd0c;
+    --info: #3498db;
 }
 
 body.dark-theme {

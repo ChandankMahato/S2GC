@@ -1,8 +1,9 @@
 @import url("./global.css");
+@import url("./ToolTip//tooltip.css");
+@import url("./Toast//toast.css");
 @import url("./navbar.css");
 @import url("./bus/commonBus.css");
 @import url("./codeEditor/code.css");
-@import url("./codeeditor/model.css");
 @import url("./memory/slider.css");
 @import url("./memory/table.css");
 @import url("./memory/toggle.css");
@@ -17,13 +18,15 @@
 @import url("./bus/ALU.css");
 @import url("./bus/INPR.css");
 @import url("./bus/FLAG.css");
+@import url("./bus/flipflop.css");
 @import url("./bus/IR.css");
 @import url("./bus/TR.css");
 @import url("./bus/OUTR.css");
-
-.body-content {
-  margin: 25px;
-}
+@import url("./bus/SC.css");
+@import url("./bus/MIS.css");
+@import url("./pausePlay/pausePlay.css");
+@import url("./model//confirmation.css");
+@import url("./video//video.css");
 
 @media only screen and (min-width: 768px) {
   .body-content {

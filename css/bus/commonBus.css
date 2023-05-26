@@ -1,3 +1,8 @@
+.common-bus-container-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .common-bus-container {
   height: 600px;
   align-items: center;
@@ -5,33 +10,31 @@
 
 .common-bus-box {
   overflow-y: auto;
-  border: 1px solid var(--dark);
+  border: 2px solid var(--dark);
   padding: 10px;
 }
 
 .bus-container {
-  width: 850px;
+  width: 100%;
 }
 
 .bus-implementation-div {
   position: relative;
   height: 500px;
-  width: 800px;
+  width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
   .common-bus-container {
-    width: 60%;
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .common-bus-container {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
+    width: 90%;
+    margin-left: 5%;
   }
 }
 

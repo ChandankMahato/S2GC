@@ -1,6 +1,8 @@
-const Arithmetics = require("../arithmetics/arithmetics");
-
 class SequenceCounter {
+  #size;
+  #value;
+  #clr;
+  #inr;
   constructor(size) {
     this.#size = size;
     this.#value = Arithmetics.createStandardSize("0", this.#size);
@@ -28,10 +30,14 @@ class SequenceCounter {
     this.#clr = newVal;
   }
 
+  setValue(value) {
+    this.#value = value;
+  }
+
   increamentValue() {
     if (this.#inr) {
       this.#inr = false;
-      this.#value = Arithmetics.increament(this.#value)[0];
+      this.#value = Arithmetics.increament(this.#value);
     } else {
       throw "Cannot increament Sequence Counter";
     }

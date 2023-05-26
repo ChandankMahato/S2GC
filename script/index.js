@@ -1,5 +1,10 @@
 let scriptList = [
+  "../script/model/confirm.js",
+  "../script/Toast/toast.js",
+  "../script/bus/constants.js",
+  "../src/arithmetics/arithmetics.js",
   "../script/color.js",
+  "../script/colorIf.js",
   "../script/navBar/navbar.js",
   "../script/memory/memory.js",
   "../script/memory/slider.js",
@@ -28,8 +33,27 @@ let scriptList = [
   "../script/bus/INPR/INPR.js",
   "../script/bus/ALU/ALUColors.js",
   "../script/bus/ALU/ALU.js",
+  "../script/bus/FlipFlop/FF.js",
+  "../script/bus/SC/SC.js",
+  "../script/bus/SC/SCColors.js",
   "../script/codeEditor/model.js",
+  "../src/decoder/decoder.js",
+  "../src/registers/sequenceCounter.js",
+  "../src/operations/decodeOperations.js",
+  "../src/operations/fetchOperations.js",
+  "../src/operations/mriOperations.js",
+  "../src/operations/rriOperations.js",
+  "../src/operations/resolveEffectiveAddressOperations.js",
+  "../src/instructions/instructions.js",
+  "../src/ds/stack.js",
+  "../src/componentInstances.js",
+  "../src/assembler/scanner.js",
+  "../src/assembler/assembler.js",
+  "../src/assembler/run.js",
+  "../script/pausePlay/PP.js",
+  "../script/video/video.js",
 ];
+
 scriptList.forEach(function (s) {
   let script = document.createElement("script"); //creating <script> element
   script.src = s;

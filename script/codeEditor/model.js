@@ -1,16 +1,29 @@
-// Get the modal
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
+const cancelButton = document.getElementById("btn1");
+const okButton = document.getElementById("btn2");
+const refreshButton = document.getElementById("refresh-icon");
 
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-span.onclick = function () {
-  modal.style.display = "none";
-};
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+refreshButton.addEventListener("click", function () {
+  const rect = refreshButton.getBoundingClientRect();
+  const top = rect.top + window.pageYOffset;
+  confirmationBox.style.top = `${top + 170}px`;
+  document.getElementById("confirm-title").innerHTML =
+    "Code Editor will be cleared!";
+  okButton.addEventListener("click", okButtonClick);
+  cancelButton.addEventListener("click", cancelButtonClick);
+  showConfirmationBox();
+  function okButtonClick(event) {
+    event.preventDefault();
+    document.getElementById("code-editor").value = "";
+    hideConfirmationBox();
+    createToast("success", "Code Editor Cleared!");
+    okButton.removeEventListener("click", okButtonClick);
+    cancelButton.removeEventListener("click", cancelButtonClick);
   }
-};
+  function cancelButtonClick(event) {
+    event.preventDefault();
+    hideConfirmationBox();
+    createToast("error", "Code Editor Clear Cancled!");
+    okButton.removeEventListener("click", okButtonClick);
+    cancelButton.removeEventListener("click", cancelButtonClick);
+  }
+});

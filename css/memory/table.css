@@ -1,3 +1,8 @@
+.memory-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
 .slot-container {
   overflow-y: auto;
 }
@@ -23,6 +28,7 @@
 }
 
 .cellData {
+  position: relative;
   border: 1px solid var(--gray);
   padding: 4px;
   text-align: center;
@@ -50,16 +56,23 @@
   color: var(--white);
 }
 
-@media only screen and (min-width: 768px) {
-  .memory-container {
-    width: 30%;
-  }
+.cellData::before {
+  content: attr(id);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
 }
 
-@media only screen and (max-width: 768px) {
-  .memory-container {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
+.cellData:hover::before {
+  opacity: 1;
+  pointer-events: auto;
 }
