@@ -1,2 +1,2 @@
 # The-S2GC
-https://s2gc.netlify.app/
+https://s2gc.chandanmahato.com.np/
